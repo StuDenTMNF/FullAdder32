@@ -28,6 +28,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+#Добавление от copilot для работы с mathjax
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  math_engine: mathjax    # или katex
+  parse_block_html: true
 
 # Build settings
 theme: minima
