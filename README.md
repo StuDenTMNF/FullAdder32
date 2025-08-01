@@ -14,6 +14,7 @@ S - это сумма. C - Это так называемый бит перен�
 
 <img width="178" height="220" alt="image" src="https://github.com/user-attachments/assets/25ebc780-0e7e-4cc4-a8ca-6096c685d9f1" />
 Запишем макстермы для S и С:
+
 $$
 S = A \oplus B 
 $$
