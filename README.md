@@ -42,4 +42,12 @@ assign C = A & B;
 endmodule
 ```
 2. создание Xor
-   
+   ```Verilog
+   module Andd(
+    input A,
+    input B,
+    output C
+);
+assign C = A & B;
+endmodule
+```
