@@ -29,11 +29,17 @@ $$
 Приступаем к созданию полусумматора:
 1. Создание And.
  ```
+#####system verilog#####
+//Наш модуль нельзя называть с точности And, т.к это конфликт с внутренней библиотекой Quartis
 module Andd(
-input  logic A,
+input  logic A, //объявляем тип переменной как logic
 input  logic B,
 output logic C
 );
 
 assign C = A & B;
+
+endmodule
 ```
+2. создание Xor
+   
