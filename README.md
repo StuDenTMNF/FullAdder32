@@ -94,7 +94,8 @@ Andd And1( .A(a), .B(b), .C(carry_o) );
 
 Теперь можно переходить к полному сумматору.
 
-##Полный сумматор.(FullAdder)
+## Полный сумматор.(FullAdder)
+
 Неполный сумматор отличался тем, что в него не входил бит переноса Cin. Сейчас же нужно рассмотреть случай, при котором существует бит переноса Cin, входящий в наш сумматор.
 
 Записываем таблицу истинности:
@@ -103,11 +104,11 @@ Andd And1( .A(a), .B(b), .C(carry_o) );
 Пишем макстермы для Cout, S.
 
 $$ 
-Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B} \lor CinAB= aa
+Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B} \lor CinAB=
 $$
 
 $$
-S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B} \lor CinAB =aa
+S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B} \lor CinAB = A \oplus B \oplus Cin (нужно лишь сравнить таблицу истинности для трехвводового XOR'a и нашу таблицу истинности)
 $$
 
 
