@@ -30,7 +30,9 @@ $$
 1. Создание And.
  ```
 Systemverilog
+
 //Наш модуль нельзя называть с точности And, т.к это конфликт с внутренней библиотекой Quartis
+
 module Andd(
 input  logic A, //объявляем тип переменной как logic
 input  logic B,
@@ -42,12 +44,15 @@ assign C = A & B;
 endmodule
 ```
 2. создание Xor
-   ```Verilog
-   module Andd(
-    input A,
-    input B,
-    output C
+ ```
+ Systemverilog
+
+module Xorr(
+input  logic A, B, 
+output logic C
 );
-assign C = A & B;
-endmodule
+
+assign C = A | B;
+
+endmodule 
 ```
