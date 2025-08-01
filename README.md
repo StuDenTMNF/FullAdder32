@@ -112,3 +112,9 @@ $$
 S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B] \lor CinAB =aa
 
 $$
+
+
+$$
+S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B] \lor CinAB =aa
+$$
+
