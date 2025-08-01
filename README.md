@@ -16,7 +16,7 @@ S - это сумма. C - Это так называемый бит перен�
 Запишем макстермы для S и С:
 
 $$
-S = \quad \overline{A} B \lor\quad \overline{B}A 
+S = \quad\overline{A}B\lor\quad \overline{B}A 
 $$
 
 $$
