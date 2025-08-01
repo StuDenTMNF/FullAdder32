@@ -102,19 +102,13 @@ Andd And1( .A(a), .B(b), .C(carry_o) );
 Пишем макстермы для Cout, S.
 
 $$ 
-
-Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B] \lor CinAB= aa
-
+Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B} \lor CinAB= aa
 $$
 
 $$
-
-S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B] \lor CinAB =aa
-
+S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B} \lor CinAB =aa
 $$
 
 
-$$
-S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B] \lor CinAB =aa
-$$
+
 
