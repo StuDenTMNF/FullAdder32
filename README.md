@@ -87,4 +87,24 @@ Andd And1( .A(a), .B(b), .C(carry_o) );
 ```
 Аналогично для sum_o запишите сами.
 
+Анализируем и синтезируем. Открываем Netlist и в итоге:
 
+<img width="1584" height="789" alt="image" src="https://github.com/user-attachments/assets/57d252cd-84c3-4076-b428-e7a6466145d6" />
+
+Теперь можно переходить к полному сумматору.
+
+##Полный сумматор.(FullAdder)
+Неполный сумматор отличался тем, что в него не входил бит переноса Cin. Сейчас же нужно рассмотреть случай, при котором существует бит переноса Cin, входящий в наш сумматор.
+
+Записываем таблицу истинности:
+<img width="323" height="323" alt="image" src="https://github.com/user-attachments/assets/d73ce454-b736-4df4-8450-50055a40609e" />
+
+Пишем макстермы для Cout, S.
+
+$$
+Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B] \lor CinAB= 
+$$
+
+$$
+S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B] \lor CinAB
+$$
