@@ -226,6 +226,7 @@ wire c1, c2, c3;
 
 ```
 Так как даже если вы забыли объявить провода для соединения отдельных модулей (даже если вы в самом соединении объявили, а ранее почему-то нет), то quartus об этом сообщит и сам их добавит.
+
 Warning (10236): Verilog HDL Implicit Net warning at fulladder32.sv(38): created implicit net for "c1"
 
 Warning (10236): Verilog HDL Implicit Net warning at fulladder32.sv(39): created implicit net for "c2"
