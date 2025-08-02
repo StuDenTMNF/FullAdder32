@@ -104,7 +104,7 @@ Andd And1( .A(a), .B(b), .C(carry_o) );
 Пишем макстермы для Cout, S.
 
 $$ 
-Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B} \lor CinAB=AB \lor CoutA\overline{B} \lor Cout\overline{A}B = AB \lor CB \lor CA
+Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B} \lor CinAB=AB \lor CoutA\overline{B} \lor Cout\overline{A}B = AB \lor CoutB \lor CoutA
 $$
 
 $$
@@ -112,7 +112,11 @@ S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overl
 $$
 
 (нужно лишь сравнить таблицу истинности для трехвводового XOR'a и нашу таблицу истинности)
-Для Cout же чуть чуть интереснее, но не менее просто. Мы всегда получаем единицу на выходах, когда хотя бы 2 элемента равны единице всегда
+
+Для Cout же чуть чуть интереснее, но не менее просто. Мы всегда получаем единицу на выходах, когда хотя бы 2 элемента равны единице. Т.е к примеру, если Cout = 0, То мы получаем единицу на выходе только при AB = 0. Если же Сout \neq 0, то мы получаем 1 на выходе при:
+1. A=B=1
+2. A \neq B. При A = 0, B=1, тогда Сout\overline{A}B=1, аналогично для A = 1, B=0 и тогда Cout\overline{B}A=1,
+Исходя из подобных утверждений результат представлен в последнем равенстве.
 
 
 
