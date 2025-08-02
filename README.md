@@ -233,4 +233,47 @@ Warning (10236): Verilog HDL Implicit Net warning at fulladder32.sv(39): created
 
 Warning (10236): Verilog HDL Implicit Net warning at fulladder32.sv(40): created implicit net for "c3"
 
+Ну чтож, теперь можно переходить к сумматору(fulladder32)
+
+По аналогии с 4-битным сумматором fulladder32 можно описать, масштабируя ранее написанный 4-битный сумматор.
+* Так как это сумматор для 32-битных чисел, то и числа A и В должны содержать 32 бита.
+* На вход так же подается бит переноса.
+
+1. Входные сигналы нашей схемы
+```
+
+module fulladder32(
+  input  logic [31:0] a_i, b_i,
+  input  logic        carry_i,
+  output logic [31:0] sum_o,
+  output logic        carry_o
+);
+
+```
+
+2. Определяем провода, как тип данных wire. 
+
+```
+
+wire [8.0]c;
+
+```
+3. Соединяем 4-битные сумматоры
+
+```
+
+fulladder4 f1( .a_i(a_i[3:0]),  .b_i(b_i[3:0]),  .carry_i(carry_i), .sum_o(sum_o[3:0]),  .carry_o(c[0]) ); 
+fulladder4 f2( .a_i(a_i[7:4]),  .b_i(b_i[7:4]),  .carry_i(c[0]),    .sum_o(sum_o[7:4]),  .carry_o(c[1]) );
+fulladder4 f3( .a_i(a_i[11:8]), .b_i(b_i[11:8]), .carry_i(c[1]),    .sum_o(sum_o[11:8]), .carry_o(c[2]) );
+...
+
+```
+Допишите для остальных пяти 4-битных сумматоров по аналогии.
+
+Анализируем и синтезируем. Открываем Netlist и получаем следующее:
+
+<img width="1606" height="657" alt="image" src="https://github.com/user-attachments/assets/2377f3f9-ac1f-4597-a45e-eed767371172" />
+
+Наш 32-битный сумматор готов.
+
 
