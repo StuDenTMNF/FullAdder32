@@ -275,5 +275,10 @@ fulladder4 f3( .a_i(a_i[11:8]), .b_i(b_i[11:8]), .carry_i(c[1]),    .sum_o(sum_o
 <img width="1606" height="657" alt="image" src="https://github.com/user-attachments/assets/2377f3f9-ac1f-4597-a45e-eed767371172" />
 
 Наш 32-битный сумматор готов.
+```
 
+wire [8:0]c;
+
+```
+Конечно, нам нужно было всего лишь ``` [6:0]c``` проводов. 
 
