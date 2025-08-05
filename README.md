@@ -400,11 +400,21 @@ endmodule
 
 Добавляем  Testbench в файлы проекта fulladder32. В настройках во вкладке симуляция добавляем наш файл, как testbench файл
 
+<img width="884" height="807" alt="image" src="https://github.com/user-attachments/assets/0c73d3ee-3972-478a-acd8-c2bfbda25b57" />
+
+
 <img width="530" height="566" alt="image" src="https://github.com/user-attachments/assets/a33d2ef1-939e-4cb8-81df-7237dfe4a825" />
 
 
+После этого еще раз анализируем и синтезируем. После успешно запускаем RTL Simulation.
+
+<img width="960" height="1032" alt="image" src="https://github.com/user-attachments/assets/e05137c7-e6f7-40d9-9b5f-7a8ce395282c" />
+
+В Modelsim уже мы получим следующее :
+
+<img width="1903" height="1041" alt="image" src="https://github.com/user-attachments/assets/714ca2c2-cc0b-4272-be63-956c08a62cc7" />
 
 
-<img width="884" height="807" alt="image" src="https://github.com/user-attachments/assets/0c73d3ee-3972-478a-acd8-c2bfbda25b57" />
+Все. Вся работа завершена. Мы успешно написали свой первый 32-битный сумматор.
 
 
