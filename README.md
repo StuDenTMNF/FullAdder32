@@ -1,4 +1,4 @@
-# FullAdder32
+<img width="1896" height="984" alt="image" src="https://github.com/user-attachments/assets/d6735cf2-adb1-4788-b5a4-4b9936090985" /># FullAdder32
 В данном репозитории будет рассказано о полном 32ух битном сумматоре на языке system verilog в среде разработки Quartus II PRO lite
 Введение
 32-битный сумматор - это такой элемент, который должен суммировать два 32-битных числа. Чтобы написать его, требуется рассмотреть сначала неполный сумматор, полный сумматор и масштабировать эти сумматоры до нужной нам битности. Поэтому мы начнем рассматривать неполный сумматор
@@ -425,7 +425,7 @@ endmodule
 
 В Modelsim уже мы получим следующее :            
 
-<img width="1903" height="1041" alt="image" src="https://github.com/user-attachments/assets/714ca2c2-cc0b-4272-be63-956c08a62cc7" />
+<img width="1896" height="984" alt="image" src="https://github.com/user-attachments/assets/9c827c31-70fd-4dc5-98ec-25c323df517a" />
 
 
 Все. Вся работа завершена. Мы успешно написали свой первый 32-битный сумматор.
