@@ -400,7 +400,8 @@ endmodule
 
 Добавляем  Testbench в файлы проекта fulladder32. В настройках во вкладке симуляция добавляем наш файл, как testbench файл
 
-<img width="1247" height="555" alt="image" src="https://github.com/user-attachments/assets/43bde727-6e3c-48fa-b914-a6d6ace69fc5" />
+<img width="530" height="566" alt="image" src="https://github.com/user-attachments/assets/a33d2ef1-939e-4cb8-81df-7237dfe4a825" />
+
 
 
 
