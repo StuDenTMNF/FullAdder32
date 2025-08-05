@@ -432,6 +432,6 @@ endmodule
 
 Некоторые ссылки:
 
-1.[(рисунки, идея)]((https://github.com/MPSU/APS/tree/master/Labs/01.%20Adder))
+1.[Рисунки]([url](https://github.com/MPSU/APS/tree/master/Labs/01.%20Adder))
 
 2.[Описание модулей на языке SystemVerilog](https://github.com/MPSU/APS/blob/master/Basic%20Verilog%20structures/Modules.md)
