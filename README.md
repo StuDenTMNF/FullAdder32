@@ -431,6 +431,7 @@ endmodule
 Все. Вся работа завершена. Мы успешно написали свой первый 32-битный сумматор.
 
 Некоторые ссылки:
-1.[(рисунки, идея)]([url](https://github.com/MPSU/APS/tree/master/Labs/01.%20Adder))
+
+1.[(рисунки, идея)]((https://github.com/MPSU/APS/tree/master/Labs/01.%20Adder))
 
 2.[Описание модулей на языке SystemVerilog](https://github.com/MPSU/APS/blob/master/Basic%20Verilog%20structures/Modules.md)
