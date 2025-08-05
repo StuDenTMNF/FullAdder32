@@ -410,7 +410,7 @@ endmodule
 
 <img width="960" height="1032" alt="image" src="https://github.com/user-attachments/assets/e05137c7-e6f7-40d9-9b5f-7a8ce395282c" />
 
-В Modelsim уже мы получим следующее :
+В Modelsim уже мы получим следующее :            
 
 <img width="1903" height="1041" alt="image" src="https://github.com/user-attachments/assets/714ca2c2-cc0b-4272-be63-956c08a62cc7" />
 
