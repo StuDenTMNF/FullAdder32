@@ -118,9 +118,9 @@ $$
 Cout = \overline{Сin}AB \lor Cin\overline{A}B \lor CinA\overline{B} \lor CinAB=AB \lor CoutA\overline{B} \lor Cout\overline{A}B = AB \lor CinB \lor CinA
 $$
 
-$
-S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B} \lor CinAB = A \oplus B \oplus Cin 
-$
+
+$S = \overline{Сin}\overline{A}B \lor \overline{Cin}A\overline{B} \lor Cin\overline{A}\overline{B} \lor CinAB = A \oplus B \oplus Cin$ 
+
 
 (нужно лишь сравнить таблицу истинности для трехвводового XOR'a и нашу таблицу истинности)
 
