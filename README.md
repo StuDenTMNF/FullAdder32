@@ -41,8 +41,8 @@ $$
 
 Приступаем к созданию полусумматора:
 1. Создание And.
- ```
-\\SystemVerilog
+ ```systemverilog
+
 
 //Наш модуль нельзя называть в точности And, т.к это конфликт с внутренней библиотекой Quartus
 
@@ -57,8 +57,8 @@ assign C = A & B;
 endmodule
 ```
 2. создание Xor
- ```
-\\SystemVerilog
+ ```systemverilog
+
 
 module Xorr(
 input  logic A, B, 
@@ -74,8 +74,8 @@ endmodule
 
 самое интересное в этой задаче начинается в данном пункте. Исходя из фото волшебной коробочки, которое чучили из преобразования таблицы, мы записываем следующее:
 
-```
-\\SystemVerilog
+```systemverilog
+
 
 module HalfAdder(
 input  logic a,
@@ -140,8 +140,8 @@ $$
 
 Для данной схемы потребуется новый модуль Or. Вы можете сделать его сами. 
 
-```
-\\SystemVerilog
+```systemverilog
+
 
 module Orr(
 
@@ -157,8 +157,8 @@ endmodule
 
 1. Так же определяем входные и выходные сигналы нашей схемы:
 
-```
-\\SystemVerilog
+```systemverilog
+
 
 module fulladder(
 input  logic a_i,
@@ -170,16 +170,16 @@ output logic carry_o);//выходной бит переноса
 ```
 2. Определяем провода, как тип данных wire. 
 
-```
-Systemverilog
+```systemverilog
+
 
 wire q, w, e, r, t,y;
 
 ```
 3. Соединяем модули с помощью проводов. Задача простая, просто чуть неприятная из-за количества элементов. Рекомендую сделать это самим.
 
-```
-\\SystemVerilog
+```systemverilog
+
 
 Xorr moduleXOR1( .A(a_i),     .B(b_i),     .C(q)       );//обратите внимание, что одинаковые модули должны называться по разному.
 Xorr moduleXOR2( .A(q),       .B(carry_i), .C(sum_o)   );
@@ -214,7 +214,7 @@ endmodule
 Числа же 4-битные попадают на вход всего модуля(В смысле модуля четырехбитного сумматора), как шина из 4ех проводов, каждый из четырех проводов попадает в отдельный однобитный сумматор. После однобитного сумматора они так же формируют шину из четырех проводов на выходе, оставаясь четырехбитным числом.
 
 1.Входные сигналы нашей схемы:
-```
+```systemverilog
 
 module fulladder4(
   input  logic [3:0] a_i, b_i, //Битность сигналов(проводов) задается подобным образом. Может быть задана также [0:3] или [7:4] например. 
@@ -226,7 +226,7 @@ module fulladder4(
 ```
 
 2.Теперь соединение однобитных сумматоров
-```
+```systemverilog
 fulladder fa1 (.a_i(a_i[0]), .b_i(b_i[0]), .carry_i(carry_i), .sum_o(sum_o[0]), .carry_o(c1));
 fulladder fa2 (.a_i(a_i[1]), .b_i(b_i[1]), .carry_i(c1),      .sum_o(sum_o[1]), .carry_o(c2));
 ```
@@ -237,7 +237,7 @@ fulladder fa2 (.a_i(a_i[1]), .b_i(b_i[1]), .carry_i(c1),      .sum_o(sum_o[1]), 
 <img width="1600" height="832" alt="image" src="https://github.com/user-attachments/assets/bc7ad7dc-31a9-43af-94dc-c57297667fe7" />
 
 Я специально не написал 
-```
+```systemverilog
 wire c1, c2, c3;
 
 ```
@@ -257,7 +257,7 @@ Warning (10236): Verilog HDL Implicit Net warning at fulladder32.sv(40): created
 * На вход так же подается бит переноса.
 
 1. Входные сигналы нашей схемы
-```
+```systemverilog
 
 module fulladder32(
   input  logic [31:0] a_i, b_i,
@@ -270,14 +270,14 @@ module fulladder32(
 
 2. Определяем провода, как тип данных wire. 
 
-```
+```systemverilog
 
 wire [8.0]c;
 
 ```
 3. Соединяем 4-битные сумматоры
 
-```
+```systemverilog
 
 fulladder4 f1( .a_i(a_i[3:0]),  .b_i(b_i[3:0]),  .carry_i(carry_i), .sum_o(sum_o[3:0]),  .carry_o(c[0]) ); 
 fulladder4 f2( .a_i(a_i[7:4]),  .b_i(b_i[7:4]),  .carry_i(c[0]),    .sum_o(sum_o[7:4]),  .carry_o(c[1]) );
@@ -292,7 +292,7 @@ fulladder4 f3( .a_i(a_i[11:8]), .b_i(b_i[11:8]), .carry_i(c[1]),    .sum_o(sum_o
 <img width="1606" height="657" alt="image" src="https://github.com/user-attachments/assets/2377f3f9-ac1f-4597-a45e-eed767371172" />
 
 Наш 32-битный сумматор готов.
-```
+```systemverilog
 
 wire [8:0]c;
 
@@ -303,7 +303,7 @@ wire [8:0]c;
 
 К сожалению, у меня пока нет навыков написания testbench для проектов, поэтому мы будем пользоваться готовым для проверки нашего сумматора. 
 
-```
+```systemverilog
 
 `timescale 1ns/1ns
 
